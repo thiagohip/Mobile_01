@@ -5,7 +5,7 @@ export function Python(){
 
     return(
         <View>
-            <LanguageComponent></LanguageComponent>
+            <LanguageComponent text='Python' image={require('../../assets/python.png')}></LanguageComponent>
         </View>
     )
 }

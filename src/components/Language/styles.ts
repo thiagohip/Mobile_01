@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import {colors} from '../../styles/GlobalStyle'
+import {colors, fonts} from '../../styles/GlobalStyle'
 
 export const styles = StyleSheet.create({
     language: {
@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
     },
     text: {
         color: colors.primary,
-        fontSize: 40
+        fontFamily: fonts.primary,
+        fontSize: 40,
     }
   });
