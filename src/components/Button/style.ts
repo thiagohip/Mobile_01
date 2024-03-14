@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
         marginBottom: 40
     },
 
-    button_unpressed: {
+    button: {
         borderColor: colors.primary,
         borderWidth: 2,
         width: 25,
@@ -23,8 +23,8 @@ export const styles = StyleSheet.create({
     },
 
     button_pressed: {
-        backgroundColor: colors.primary,
         borderColor: colors.primary,
+        backgroundColor: colors.primary,
         borderWidth: 2,
         width: 25,
         height: 25,

@@ -7,9 +7,10 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       marginBottom: 120
     },
+    
     text: {
         color: colors.primary,
-        fontFamily: fonts.primary,
         fontSize: 40,
+        fontFamily: fonts.regular,
     }
   });

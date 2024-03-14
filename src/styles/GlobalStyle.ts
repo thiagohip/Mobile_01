@@ -5,8 +5,9 @@ export const colors = {
 }
 
 export const fonts = {
-  primary: 'JosefinSans_400Regular',
+  regular: 'JosefinSans_400Regular',
 }
+
 
 export const styles = StyleSheet.create({
     container: {
@@ -16,3 +17,4 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
     },
   });
+

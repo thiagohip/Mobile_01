@@ -3,17 +3,15 @@ import {styles} from './style'
 
 interface IButton extends TouchableOpacityProps {
     onPressI: () => void
+    buttonPressed: boolean
 }
 
-const changeColor = () =>{
-    buttonStyle = styles.button_pressed
-}
 
-export function Button({onPressI}: IButton){
+export function Button({onPressI, buttonPressed}: IButton){
 
-    const [] = useState(false)
+    const styleNow = buttonPressed ? styles.button_pressed : styles.button;
 
     return(
-        <TouchableOpacity style={styles.button} onPress={onPressI}></TouchableOpacity>
+        <TouchableOpacity style={styleNow} onPress={onPressI}></TouchableOpacity>
     )
 }

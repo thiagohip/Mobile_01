@@ -3,9 +3,11 @@ import { styles as s} from "./src/styles/GlobalStyle";
 import { PythonScreen, JavascriptScreen, CppScreen } from "./src/screens/index";
 import { NavigationComponent } from './src/components';
 import { Dispatch, SetStateAction, useState } from 'react';
+import {  useFonts, JosefinSans_400Regular } from '@expo-google-fonts/josefin-sans';
 
 export interface IPage{
-  setPageI: Dispatch<SetStateAction<number>>
+  setPageI: Dispatch<SetStateAction<number>>,
+  pageNow: Number
 }
 
 function ReturnPage({page}: {page: number}){
@@ -23,12 +25,23 @@ function ReturnPage({page}: {page: number}){
 }
 
 export default function App() {
+
   const [ page, setPage ] = useState(1);
+
+  let [fontsLoaded] = useFonts({
+    JosefinSans_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
+  
 
   return (
     <View style={s.container}>
       <ReturnPage page={page}/>
-      <NavigationComponent setPageI={setPage}></NavigationComponent>
+      <NavigationComponent setPageI={setPage} pageNow={page}></NavigationComponent>
     </View>
   );
 }
